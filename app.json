@@ -1,13 +1,41 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/bleconnect/bleconnect",
+    "pages/logs/logs",
+    "pages/getcurve/getcurve",
+    "pages/getdata/getdata",
+    "pages/line/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/选择_蓝牙.png",
+        "iconPath": "images/蓝牙.png",
+        "pagePath": "pages/bleconnect/bleconnect",
+        "text": "连接"
+      },
+      {
+        "selectedIconPath": "images/选择_数据.png",
+        "iconPath": "images/数据.png",
+        "pagePath": "pages/getdata/getdata",
+        "text": "数据"
+      },
+      {
+        "selectedIconPath": "images/选择_图表.png",
+        "iconPath": "images/图表.png",
+        "pagePath": "pages/getcurve/getcurve",
+        "text": "图表"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json"
 }

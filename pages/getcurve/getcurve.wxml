@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<view class="{{curve}}">
+  <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+</view>
+
+<i-col i-class="data-col" span="10">
+  <i-card i-class="data">
+    <view slot="content" class="data-item background">
+      <view class="data-item-title"><text>{{showData}}</text></view>
+    </view>
+  </i-card>
+</i-col>
+
+<view class="func" hidden="{{hidden}}">
+
+  <i-alert type="warning" show-icon closable>
+    自动测量状态下无法使用手动调节
+  </i-alert>
+
+  <wux-cell hover-class="none"></wux-cell>
+  <wux-cell title="手动调节转速" hover-class="none">
+    <wux-input-number longpress disabled="true" value="{{value}}" controlled="true" min="{{0}}" max="{{2500}}" bind:change="handleChange" slot="footer" />
+  </wux-cell>
+
+  <text>\n</text>
+
+  <view class="section">
+    <button class='btn' bindtap='changeStat'>{{stat}}</button>
+    <button class='btn' bindtap='cleanCurve'>清空图像</button>
+  </view>
+
+  <text>\n</text>
+
+  <view class='section'>
+    <button class='btn' bindtap='autoon'>自动测量</button>
+    <button class='btn'bindtap='autooff'>停止测量</button>
+  </view>
+  
+</view>
+  

@@ -1,0 +1,82 @@
+<!-- <view><text>{{origindata}}</text></view> -->  <!--调试用-->
+<i-toast id="toast" />
+
+<i-alert type="warning" show-icon closable>
+    保存所有数据 即 保存图像中的点数据，此操作需暂停绘图
+</i-alert>
+<i-alert type="warning" show-icon closable>
+    文件保存格式为txt，可导入Excel中
+</i-alert>
+
+<view class='section'>
+  <button class="btn" bindtap='showModal1'>设置滤波次数</button>
+  <modal hidden="{{hiddenModal1}}" title="设置滤波次数" confirm-text="确定" cancel-text="取消" bindconfirm="confirm1" bindcancel="cancel1">
+    <input placeholder='有效取值: 01~16' bindinput='getSmoothing' type='number' maxlength="2" />
+  </modal>
+
+  <button class="btn" bindtap='showModal2'>自动测量设置</button>
+  <modal hidden="{{hiddenModal2}}" title="设置自动测量参数" confirm-text="确定" cancel-text="取消" bindconfirm="confirm2" bindcancel="cancel2">
+    <input placeholder='测量组数 有效取值: 10～100' bindinput='getNum' type='number' maxlength="3" />
+    <text>\n</text>
+    <input placeholder='最大速度 有效取值: 100～2500' bindinput='getMax' type='number' maxlength="4" />
+  </modal>
+</view>
+
+<view class='section'>
+<button class='btn' bindtap='getStoreData' disabled="{{getexdata}}">获取定点数据</button>
+<button class='btn' bindtap='saveAll' disabled="{{noSaveAll}}">保存所有数据</button>
+</view>
+
+
+<text>\n</text>
+<text class='text'>实时数据</text>
+<view class="table">
+  <view class="tr">
+    <view class="th curr">F1</view>
+    <view class="th curr">F2</view>
+    <view class="th curr">V</view>
+  </view>
+  <view class="tr">
+    <view class="td">{{currData.f1}}</view>
+    <view class="td">{{currData.f2}}</view>
+    <view class="td">{{currData.v2}}</view>
+  </view>
+</view>
+
+<view hidden="{{hiddenStore}}">
+  <text>\n</text>
+  <text class='text'>定点数据</text>
+    <view class="table">
+      <view class="tr">
+          <view class="th store">ID</view>
+          <view class="th store">F1</view>
+          <view class="th store">F2</view>
+          <view class="th store">V</view>
+      </view>
+      <view class="tr" wx:for="{{storeData}}" wx:key="id">
+          <view class="td">{{item.id}}</view>
+          <view class="td">{{item.f1}}</view>
+          <view class="td">{{item.f2}}</view>
+          <view class="td">{{item.v2}}</view>
+      </view>
+    </view>
+</view>
+<!--<view >
+<button  class="hide{{showView?'show':''}}" bindtap="onChangeShowState">{{showView?'隐藏记录数据':'显示记录数据'}}</button>    <!--?:即表示了一种选择关系-->
+ <!--> <button class="hide{{showView?'':'show'}}" bindtap="onChangeShowState">{{showView?'隐藏记录数据':'显示记录数据'}}</button>
+ </view>
+ <view class="hide{{showView?'show':''}}">
+    <text class='text'>存储数据</text>
+    <view class="table">
+      <view class="tr">
+          <view class="th th">F1</view>
+          <view class="th th">F2</view>
+          <view class="th th">V</view>
+      </view>
+      <view wx:for="{{store}}">
+          <view class="td td">{{store.f1}}</view>
+          <view class="td td">{{store.f2}}</view>
+          <view class="td td">{{store.v2}}</view>
+      </view>
+    </view>
+ </view>-->

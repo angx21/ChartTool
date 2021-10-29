@@ -1,0 +1,17 @@
+{
+  "navigationBarTitleText": "InputNumber",
+  "usingComponents": {
+    "ec-canvas": "../../ec-canvas/ec-canvas",
+    "i-switch": "../../iview-weapp/switch/index",
+    "i-divider": "../../iview-weapp/divider/index",
+    "i-input-number": "../../iview-weapp/input-number/index",
+    "i-card": "../../iview-weapp/card/index",
+    "i-col": "../../iview-weapp/col/index",
+    "i-alert": "../../iview-weapp/alert/index",
+    
+    "wux-cell-group": "../../wux-weapp/cell-group/index",
+    "wux-cell": "../../wux-weapp/cell/index",
+    "wux-input-number": "../../wux-weapp/input-number/index"
+  },
+  "pageOrientation": "auto"
+}

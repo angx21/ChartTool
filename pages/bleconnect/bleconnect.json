@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "i-cell-group": "../../iview-weapp/cell-group/index",
+    "i-cell": "../../iview-weapp/cell/index",
+    "i-notice-bar": "../../iview-weapp/notice-bar/index",
+    "i-switch": "../../iview-weapp/switch/index",
+    "i-load-more": "../../iview-weapp/load-more/index"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "i-alert": "../../iview-weapp/alert/index",
+    "i-toast": "../../iview-weapp/toast/index"
+  }
+}

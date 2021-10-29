@@ -1,4 +1,3 @@
-/**app.wxss**/
 .container {
   height: 100%;
   display: flex;
@@ -8,3 +7,22 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+.btn {
+  width: 35%;
+  margin-top: 30rpx;
+ /* background-color: rgb(177, 172, 172);*//*背景颜色*/
+  color:black;/*字体颜色*/
+}/*如果<button></button>组件里面写 type='....'，修改背景颜色会无效*/
+/*.btn::after {
+  border: 0;
+}*//*按钮去边框*/
+.btn_hover {
+  background-color: rgb(237, 240, 81);
+}/*按钮点击时的背景颜色*/
+
+.section{
+  display: flex;
+  flex-direction:row;
+  justify-content: center
+  /* flex-start  */
+}

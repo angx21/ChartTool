@@ -1,0 +1,12 @@
+.line{
+width: 100%;
+margin-top: 20rpx;
+border-top:1px #1d1717 solid;
+}
+
+.test{
+  margin: 0 auto;
+  /*width: 250rpx;
+  height: 8rpx;*/
+  background-color: rgb(229, 226, 226);
+}

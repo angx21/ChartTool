@@ -1,0 +1,62 @@
+/*表格*/
+.table{
+  border:1px solid #6b6a6a;
+  border-right:0;
+  border-bottom: 0;
+  width: 98%;
+  margin-left: 1%;
+}
+.tr{
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+}
+.th,.td{
+  padding: 10px;
+  border-bottom: 1px solid #6b6a6a;
+  border-right: 1px solid #6b6a6a;
+  text-align: center;
+  width: 100%;
+}
+
+.th{
+  font-weight: 800;
+  font-size: 28rpx;
+  color: #FFFFFF;
+}
+.th.curr{
+  background-color: #5cadff;
+}
+.th.store{
+  background-color: #80848f;
+}
+
+.td{
+  font-size: 35rpx;
+  color: #6b6a6a;
+  height: 15px;
+}
+/*表格*/
+.text { 
+display: flex;
+align-items: center;
+justify-content: center;
+}
+/**/
+.hide{
+ display: none;
+}
+.show{ 
+ display: block;
+}
+/**/
+
+.btn {
+  width: 45%;
+  margin-top: 30rpx;
+  background-color: rgb(152,208,97);
+  color:#FFFFFF;/*字体颜色*/
+}/*如果<button></button>组件里面写 type='....'，修改背景颜色会无效*/
+/*.btn::after {
+  border: 0;
+}*//*按钮去边框*/

@@ -1,0 +1,67 @@
+/* pages/getcurve/getcurve.wxss */
+/**index.wxss**/
+#mychart-dom-line {
+  width: 100%;
+  height: 100%;
+}
+.curve-f,.curve-h {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;/*space-around 左右边上有边距space-between 左右边上没有边距*/
+  box-sizing: border-box;
+} 
+.curve-h {
+  top:15px;
+  bottom: 50%;
+} 
+
+.func{
+  position:absolute;
+  top:50%;
+}
+
+.btn{
+  position: relative;
+  width: 150px;
+  margin:auto;
+  margin-left:15%;
+  margin-right:auto;
+  background-color: rgb(152,208,97);/*背景颜色*/
+  color:#FFFFFF;/*字体颜色*/
+}
+
+
+.data{
+    padding: 0 !important;
+    border: none !important;
+}
+.data-col{
+    margin-bottom: 16px;
+}
+.data-item{
+    width: 100%;
+    color: #fff;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+}
+
+.data-item-title{
+    padding: 6px 6px 0;
+    font-size: 14px;
+}
+.data-item-content{
+    padding: 6px;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.data-item.background{
+    background: #80848f;
+}

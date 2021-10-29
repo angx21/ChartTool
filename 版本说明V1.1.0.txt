@@ -1,0 +1,20 @@
+******版本说明V1.1.0******
+较V1.0.2版本：
+
+有较大的改动
+
+1. UI部分
+  引用wux-weapp和iview-weapp两个UI框架
+  删除了index登录页
+2. 图像部分
+  折线图改为散点图
+3. 数据部分
+  引用全局变量：app.globalData.data;  而直接app.data其实是自己重新声明了数据
+
+
+【调试用 已注释】
+[bleconnect.js]: 主页显示底部导航栏
+[getdata.wxml]: L1 实时显示接收原始蓝牙数据
+[getdata.js] L43 实时显示接收原始蓝牙数据
+[getcurve.js]: L142 用随机数绘图
+

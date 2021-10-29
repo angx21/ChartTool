@@ -1,0 +1,22 @@
+<!--pages/bleconnect/bleconnect.wxml-->
+  <i-cell-group>
+    <i-cell></i-cell>
+    <i-cell title="打开/关闭蓝牙">
+      <i-switch value="{{switch1}}" bind:change="onChange" slot="footer"></i-switch>
+      <!-- <switch checked bindchange="switchChange" margin-right="15px"/> -->
+    </i-cell>
+    <i-cell></i-cell>
+  </i-cell-group>
+
+  <i-notice-bar backgroundcolor="{{bkcolor}}" color="#FFFFFF" >
+    当前状态————{{stat}}
+  </i-notice-bar>
+
+  <i-cell-group>
+    <i-cell></i-cell>
+    <i-cell value="点击连接" is-link bind:click='getDeviceId' wx:for="{{bleDevice}}" wx:key="id" data-id='{{item.id}}' data-name='{{item.name}}'><text>{{item.name}}  {{item.id}}\n</text></i-cell>
+    <i-cell></i-cell>
+  </i-cell-group>
+
+  <i-load-more loading="{{loading}}" />
+  <!--<view class='line'></view>-->
